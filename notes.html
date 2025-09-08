@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morgane Bonsu — Portfolio & Curatorial Notes</title>
+<meta name="description" content="Portfolio, projets curatoriaux et notes critiques de Morgane Bonsu.">
+<meta property="og:title" content="Morgane Bonsu — Portfolio & Curatorial Notes">
+<meta property="og:description" content="Portfolio, projets curatoriaux et notes critiques.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/og-image.jpg">
+<link rel="icon" href="assets/images/favicon.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">MONOREAU</a>
+  <nav class="main-nav">
+    <a href="index.html">Accueil</a>
+    <a href="projets.html">Projets</a>
+    <a href="notes.html">Notes</a>
+    <a href="agenda.html">Agenda</a>
+    <a href="a-propos.html">À&nbsp;propos</a>
+    <a class="cta" href="contact.html">Contact</a><button class="theme-toggle" onclick="toggleTheme()">Noir/Jaune</button>
+  </nav>
+</header>
+<main class="wrap">
+
+<h1>Notes</h1>
+<p class="prose">Blog critique : expositions, œuvres qui marquent, rencontres, et petits essais. Format court, regard précis.</p>
+
+<article class="prose">
+  <h2>Vernissage — trois œuvres, trois espaces</h2>
+  <p class="meta">8 septembre 2025</p>
+  <p>Exemple de billet. Remplacez ce texte par vos notes : contexte de l’expo, intentions, sélection d’œuvres, micro‑analyse (3–5 lignes par œuvre), et <em>takeaway</em> curatoriale.</p>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <strong>Morgane Bonsu</strong><br>
+      Curating • Direction artistique • Studio
+    </div>
+    <div>
+      <a href="mailto:studio@monoreau.fr">studio@monoreau.fr</a><br>
+      </div>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" aria-label="Substack">Substack</a>
+    </div>
+  </div>
+  <p class="tiny">© 2025 — Fait avec ❤️ et HTML/CSS. Hébergez‑le gratuitement sur Netlify / GitHub Pages.</p>
+<div class="footer-locations">Paris — London — New York</div></footer>
+
+<script>
+(function(){
+  const t = localStorage.getItem('theme-monoreau');
+  if(t==='yellow') document.documentElement.classList.add('theme-yellow');
+})();
+function toggleTheme(){
+  const c = document.documentElement.classList.toggle('theme-yellow');
+  localStorage.setItem('theme-monoreau', c ? 'yellow' : 'default');
+}
+</script>
+</body>
+</html>
