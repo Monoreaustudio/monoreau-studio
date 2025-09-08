@@ -1,0 +1,19 @@
+{
+  "mode": "image",
+  "title": "",
+  "subtitle": "",
+  "media": [
+    {
+      "type": "image",
+      "src": "assets/images/hero-user.png",
+      "alt": "Œuvre principale"
+    }
+  ],
+  "video": {
+    "src": "",
+    "poster": "",
+    "muted": true,
+    "loop": true,
+    "autoplay": true
+  }
+}

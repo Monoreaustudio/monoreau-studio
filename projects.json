@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "title": "Traversée",
+      "meta": "Mise en espace • 2025",
+      "image": "assets/images/placeholder-1.jpg",
+      "link": "#"
+    },
+    {
+      "title": "Combustion chromatique",
+      "meta": "Texte & accrochage • 2025",
+      "image": "assets/images/placeholder-2.jpg",
+      "link": "#"
+    },
+    {
+      "title": "Multiple(s)",
+      "meta": "Recherche • 2025",
+      "image": "assets/images/placeholder-3.jpg",
+      "link": "#"
+    }
+  ]
+}
