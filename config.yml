@@ -1,0 +1,102 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+site_url: "/"
+logo_url: "/assets/images/og-image.jpg"
+
+collections:
+  - name: "notes"
+    label: "Notes"
+    files:
+      - file: "content/notes.json"
+        label: "Liste des notes"
+        name: "noteslist"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+              - {label: "Lecture (ex: 3 min)", name: "reading", widget: "string", required: false}
+              - {label: "Résumé", name: "summary", widget: "text", required: false}
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Lien (optionnel)", name: "url", widget: "string", required: false}
+
+  - name: "projects"
+    label: "Projets"
+    files:
+      - file: "content/projects.json"
+        label: "Liste des projets"
+        name: "projectslist"
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Meta", name: "meta", widget: "string", hint: "ex: Mise en espace • 2025"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Lien", name: "link", widget: "string", required: false}
+
+  - name: "hero"
+    label: "Hero (image/slider/vidéo)"
+    files:
+      - file: "content/hero.json"
+        label: "Section hero"
+        name: "hero"
+        fields:
+          - {label: "Mode", name: "mode", widget: "select", options: ["image","slider","video"], default: "slider"}
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Sous-titre", name: "subtitle", widget: "string", required: false}
+          - label: "Médias (pour image/slider)"
+            name: "media"
+            widget: "list"
+            required: false
+            fields:
+              - {label: "Type", name: "type", widget: "select", options: ["image"], default: "image"}
+              - {label: "Fichier image", name: "src", widget: "image"}
+              - {label: "Alt", name: "alt", widget: "string", required: false}
+          - label: "Vidéo (optionnel)"
+            name: "video"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Fichier vidéo (mp4)", name: "src", widget: "file", required: false}
+              - {label: "Poster (image)", name: "poster", widget: "image", required: false}
+              - {label: "Autoplay", name: "autoplay", widget: "boolean", default: true}
+              - {label: "Muet", name: "muted", widget: "boolean", default: true}
+              - {label: "Boucle", name: "loop", widget: "boolean", default: true}
+
+
+  - name: "manifesto"
+    label: "Manifeste (intro)"
+    files:
+      - file: "content/manifesto.json"
+        label: "Bloc d'intro"
+        name: "intro"
+        fields:
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Texte", name: "text", widget: "text"}
+
+  - name: "events"
+    label: "Agenda (événements)"
+    files:
+      - file: "content/events.json"
+        label: "Liste des événements"
+        name: "events"
+        fields:
+          - label: "Événements"
+            name: "events"
+            widget: "list"
+            fields:
+              - {label: "Titre", name: "title", widget: "string"}
+              - {label: "Date (YYYY-MM-DD)", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+              - {label: "Lieu (salle/espace)", name: "venue", widget: "string"}
+              - {label: "Ville", name: "city", widget: "string"}
+              - {label: "Tags", name: "tags", widget: "list", required: false}
+              - {label: "Lien", name: "link", widget: "string"}
